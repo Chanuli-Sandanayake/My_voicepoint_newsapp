@@ -1,19 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#80A850C5"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- Logo Image: Centered with 275dp from top & 406dp from bottom -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="201dp"
+        android:layout_height="236dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="275dp"
+        android:layout_marginBottom="406dp"
+        android:contentDescription="@string/app_logo"
+        android:src="@drawable/logo" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Footer Text: Centered, 74dp from bottom -->
+    <TextView
+        android:id="@+id/footerText"
+        android:layout_width="98dp"
+        android:layout_height="28dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="74dp"
+        android:text="@string/footer_text"
+        android:importantForAccessibility="no"
+        android:textColor="#7B6B6B"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif" />
+</RelativeLayout>
+
+

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My_voicepoint_newsapp</string>
+    <string name="footer_text">UOC|FOT</string>
+    <string name="app_logo">App Logo</string>
 </resources>
