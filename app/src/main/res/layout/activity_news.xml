@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80A850C5">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="74dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:contentDescription="Logo" />
+
+    <!-- "In the Spotlight" -->
+
+    <!-- Horizontal Carousel RecyclerView -->
+    <TextView
+        android:id="@+id/carouselTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImage"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif"
+        android:text="In the Spotlight"
+        android:layout_marginStart="25dp"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/horizontalCarousel"
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        android:layout_below="@id/carouselTitle"
+        android:layout_marginTop="10dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:layout_centerHorizontal="true" />
+
+    <!-- "All" Section Title -->
+    <TextView
+        android:id="@+id/allTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_below="@id/horizontalCarousel"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="27dp"
+        android:text="All"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif" />
+
+    <!-- All News Vertical RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/verticalNewsList"
+        android:layout_width="390dp"
+        android:layout_height="411dp"
+        android:layout_below="@id/allTitle"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:background="#40000000"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:padding="12dp" />
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#A850C5">
+
+        <ImageButton
+            android:id="@+id/navSports"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="25dp"
+            android:background="@drawable/sports"
+            android:contentDescription="Sports" />
+
+        <ImageButton
+            android:id="@+id/navAcademic"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="25dp"
+            android:background="@drawable/academic"
+            android:contentDescription="Academic" />
+
+        <ImageButton
+            android:id="@+id/navEvents"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="25dp"
+            android:background="@drawable/events"
+            android:contentDescription="Events" />
+
+        <ImageButton
+            android:id="@+id/navMenu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="25dp"
+            android:background="@drawable/menu"
+            android:contentDescription="Menu" />
+    </LinearLayout>
+
+</RelativeLayout>
