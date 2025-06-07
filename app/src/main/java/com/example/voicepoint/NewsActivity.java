@@ -38,10 +38,32 @@ public class NewsActivity extends AppCompatActivity {
         fetchNewsFromFirebase();
 
         //newsdetails
+        ImageButton navSports = findViewById(R.id.navSports);
+        ImageButton navAcademic = findViewById(R.id.navAcademic);
+        ImageButton navEvents = findViewById(R.id.navEvents);
+        ImageButton navMenu = findViewById(R.id.navMenu);
 
+        navSports.setOnClickListener(v -> {
+            Intent i = new Intent(NewsActivity.this, NewsDetailsActivity.class);
+            i.putExtra("category", "sports");
+            startActivity(i);
+        });
 
+        navAcademic.setOnClickListener(v -> {
+            Intent i = new Intent(NewsActivity.this, NewsDetailsActivity.class);
+            i.putExtra("category", "academic");
+            startActivity(i);
+        });
+
+        navEvents.setOnClickListener(v -> {
+            Intent i = new Intent(NewsActivity.this, NewsDetailsActivity.class);
+            i.putExtra("category", "events");
+            startActivity(i);
+        });
 
         //newsdetails
+
+
     }
 
 
