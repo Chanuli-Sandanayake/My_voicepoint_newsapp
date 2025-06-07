@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
             // TODO: Replace with your next activity
-            //startActivity(new Intent(MainActivity.this, SignInActivity.class));
+            startActivity(new Intent(MainActivity.this, SignInActivity.class));
             finish();
         }, SPLASH_DURATION);
     }
