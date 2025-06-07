@@ -34,9 +34,9 @@ public class SignInActivity extends AppCompatActivity {
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
 
                     // Redirect to Home Screen (next activity)
-                    //Intent intent = new Intent(SignInActivity.this, NewsActivity.class);
-                    //startActivity(intent);
-                    //finish(); // optional: this finishes SignInActivity so user can’t go back
+                    Intent intent = new Intent(SignInActivity.this, NewsActivity.class);
+                    startActivity(intent);
+                    finish(); // optional: this finishes SignInActivity so user can’t go back
 
 
                 } else {
