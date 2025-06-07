@@ -8,7 +8,7 @@ public class NewsItem {
 
 
     //newsdetails
-    //public String description;
+    public String description;
 
 
     public NewsItem() {}
@@ -20,7 +20,7 @@ public class NewsItem {
         this.date = date;
 
         //newsdetails
-        //this.description = description;
+        this.description = description;
     }
 
     public String getTitle() { return title; }
@@ -30,5 +30,5 @@ public class NewsItem {
 
 
     //newsdetails
-    //public String getDescription() { return description; }
+    public String getDescription() { return description; }
 }
