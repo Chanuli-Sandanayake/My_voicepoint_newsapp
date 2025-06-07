@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SignInActivity extends AppCompatActivity {
 
     EditText usernameInput, passwordInput;
-    Button loginButton;
+    Button loginButton,signUpTab;
     DBHelper DB;
 
     @Override
@@ -19,7 +19,7 @@ public class SignInActivity extends AppCompatActivity {
         usernameInput = findViewById(R.id.usernameInput);
         passwordInput = findViewById(R.id.passwordInput);
         loginButton = findViewById(R.id.loginButton);
-        //signUpTab = findViewById(R.id.signUpTab);
+        signUpTab = findViewById(R.id.signUpTab);
         DB = new DBHelper(this);
 
         loginButton.setOnClickListener(v -> {
@@ -36,7 +36,7 @@ public class SignInActivity extends AppCompatActivity {
                     // Redirect to Home Screen (next activity)
                     //Intent intent = new Intent(SignInActivity.this, NewsActivity.class);
                     //startActivity(intent);
-                    finish(); // optional: this finishes SignInActivity so user can’t go back
+                    //finish(); // optional: this finishes SignInActivity so user can’t go back
 
 
                 } else {
@@ -45,10 +45,10 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
 
-        //signUpTab.setOnClickListener(v -> {
-            //Intent intent = new Intent(SignInActivity.this, SignUpActivity.class);
-            //startActivity(intent);
-            //finish(); // optional: close SignInActivity
-        //});
+        signUpTab.setOnClickListener(v -> {
+            Intent intent = new Intent(SignInActivity.this, SignUpActivity.class);
+            startActivity(intent);
+            finish(); // optional: close SignInActivity
+        });
     }
 }

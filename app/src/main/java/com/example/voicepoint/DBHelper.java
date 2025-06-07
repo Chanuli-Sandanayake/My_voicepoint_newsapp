@@ -37,21 +37,21 @@ public class DBHelper extends SQLiteOpenHelper {
         return cursor.getCount() > 0;
     }
 
-    // Check if username already exists(signup)
-    //public Boolean checkUsername(String username) {
-        //SQLiteDatabase db = this.getReadableDatabase();
-        //Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username=?", new String[]{username});
-        //return cursor.getCount() > 0;
-    //}
+    //Check if username already exists(signup)
+    public Boolean checkUsername(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username=?", new String[]{username});
+        return cursor.getCount() > 0;
+    }
 
     // Insert new user with username, password, and email(signup)
-    //public Boolean insertUser(String username, String password, String email) {
-        //SQLiteDatabase db = this.getWritableDatabase();
-        //ContentValues values = new ContentValues();
-        //values.put("username", username);
-        //values.put("password", password);
-        //values.put("email", email);
-        //long result = db.insert("users", null, values);
-        //return result != -1;
-    //}
+    public Boolean insertUser(String username, String password, String email) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("username", username);
+        values.put("password", password);
+        values.put("email", email);
+        long result = db.insert("users", null, values);
+        return result != -1;
+    }
 }
