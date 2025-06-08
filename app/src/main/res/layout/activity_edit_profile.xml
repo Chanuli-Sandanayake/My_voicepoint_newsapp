@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80A850C5">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/back"
+        android:contentDescription="Back" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/editProfileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <!-- Profile Icon -->
+    <ImageView
+        android:id="@+id/accountIcon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/account_circle"
+        android:contentDescription="Account" />
+
+    <!-- Username Label -->
+    <TextView
+        android:id="@+id/usernameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:labelFor="@id/editUsername"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="58dp" />
+
+
+    <!-- Username Field -->
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        android:importantForAccessibility="yes"
+        android:focusable="true"
+        android:layout_below="@id/usernameLabel"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_edittext" />
+
+
+    <!-- Email Label -->
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Address"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:labelFor="@id/editEmail"
+        android:layout_below="@id/editUsername"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="58dp" />
+
+
+    <!-- Email Field -->
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        android:importantForAccessibility="yes"
+        android:focusable="true"
+        android:layout_below="@id/emailLabel"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_edittext" />
+
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/editEmail"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="Save"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_save_button" />
+</RelativeLayout>
