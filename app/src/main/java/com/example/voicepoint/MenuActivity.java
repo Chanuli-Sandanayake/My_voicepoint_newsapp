@@ -70,7 +70,7 @@ public class MenuActivity extends AppCompatActivity {
             startActivity(i);
         });
 
-        //devText.setOnClickListener(v -> startActivity(new Intent(this, DevInfoActivity.class)));
+        devText.setOnClickListener(v -> startActivity(new Intent(this, DevInfoActivity.class)));
 
         logoutText.setOnClickListener(v -> {
             Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();
