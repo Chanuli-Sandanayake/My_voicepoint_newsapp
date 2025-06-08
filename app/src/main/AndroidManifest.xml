@@ -15,6 +15,9 @@
         android:theme="@style/Theme.My_voicepoint_newsapp"
         tools:targetApi="31">
         <activity
+            android:name=".DevInfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".MenuActivity"
             android:exported="false" />
         <activity

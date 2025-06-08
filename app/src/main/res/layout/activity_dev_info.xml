@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80A850C5">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/back"
+        android:contentDescription="Back" />
+
+    <!-- Circular Profile Image -->
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="139dp"
+        android:layout_height="139dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="139dp"
+        android:scaleType="centerCrop" />
+
+    <!-- Info Container -->
+    <LinearLayout
+        android:id="@+id/infoContainer"
+        android:layout_width="412dp"
+        android:layout_height="630dp"
+        android:layout_below="@id/profileImage"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_dev_container"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chanuli Thisalya Sandanayake"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Student No -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student No"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2022t01574"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Personal Statement -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Statement"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voicepoint is a mobile Application Created to deliver the latest news updated and event information to students quickly and clearly respectively"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Version -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Version"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.0.0.1"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginBottom="30dp" />
+        <!-- Exit Button -->
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Exit"
+            android:backgroundTint="#80A850C5"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
