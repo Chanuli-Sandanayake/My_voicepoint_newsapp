@@ -60,8 +60,12 @@ public class NewsActivity extends AppCompatActivity {
             i.putExtra("category", "events");
             startActivity(i);
         });
+        findViewById(R.id.navMenu).setOnClickListener(v -> {
+            Intent intent = new Intent(NewsActivity.this, MenuActivity.class);
+            startActivity(intent);
+        });
 
-        //newsdetails
+
 
 
     }

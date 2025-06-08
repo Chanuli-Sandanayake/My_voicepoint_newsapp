@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
+
 public class SignInActivity extends AppCompatActivity {
 
     EditText usernameInput, passwordInput;
@@ -32,6 +34,15 @@ public class SignInActivity extends AppCompatActivity {
                 Boolean valid = DB.checkUsernamePassword(username, password);
                 if (valid) {
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
+
+                    SharedPreferences sharedPref = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putString("username", username);
+
+                    // Retrieve email from database and save
+                    String email = DB.getEmailByUsername(username);  // You'll add this method next
+                    editor.putString("email", email);
+                    editor.apply();
 
                     // Redirect to Home Screen (next activity)
                     Intent intent = new Intent(SignInActivity.this, NewsActivity.class);

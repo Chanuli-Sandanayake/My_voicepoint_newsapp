@@ -48,10 +48,10 @@ public class NewsDetailsActivity extends AppCompatActivity {
         findViewById(R.id.navAcademic).setOnClickListener(v -> switchCategory("academic"));
         findViewById(R.id.navEvents).setOnClickListener(v -> switchCategory("events"));
 
-        //findViewById(R.id.navMenu).setOnClickListener(v -> {
-            //Intent intent = new Intent(NewsDetailsActivity.this, MenuActivity.class);
-            //startActivity(intent);
-        //});
+        findViewById(R.id.navMenu).setOnClickListener(v -> {
+            Intent intent = new Intent(NewsDetailsActivity.this, MenuActivity.class);
+            startActivity(intent);
+        });
 
         highlightIcon(currentCategory);
     }
