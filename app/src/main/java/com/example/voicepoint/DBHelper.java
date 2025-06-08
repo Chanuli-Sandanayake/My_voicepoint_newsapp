@@ -63,4 +63,12 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return null;
     }
+    public boolean updateUser(String oldUsername, String newUsername, String newEmail) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("username", newUsername);
+        values.put("email", newEmail);
+        int result = db.update("users", values, "username=?", new String[]{oldUsername});
+        return result > 0;
+    }
 }

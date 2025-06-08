@@ -23,16 +23,16 @@ public class MenuActivity extends AppCompatActivity {
         emailText = findViewById(R.id.emailText);
 
         // Edit Profile button actions
-        //ImageView editIcon = findViewById(R.id.editIcon);
-        //TextView editProfileText = findViewById(R.id.editProfileText);
+        ImageView editIcon = findViewById(R.id.editIcon);
+        TextView editProfileText = findViewById(R.id.editProfileText);
 
-        //editIcon.setOnClickListener(v -> {
-            //startActivity(new Intent(this, EditProfileActivity.class));
-        //});
+        editIcon.setOnClickListener(v -> {
+            startActivity(new Intent(this, EditProfileActivity.class));
+        });
 
-        //editProfileText.setOnClickListener(v -> {
-            //startActivity(new Intent(this, EditProfileActivity.class));
-        //});
+        editProfileText.setOnClickListener(v -> {
+            startActivity(new Intent(this, EditProfileActivity.class));
+        });
 
         // Load username and email from shared preferences
         SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
